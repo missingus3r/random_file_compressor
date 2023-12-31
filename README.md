@@ -40,7 +40,9 @@ TC = (Original size - Compressed size) / Original size.
 Applying the values from the example:
 
 TC = (16,777,215 - 16,777,212) / 16,777,215
+
 TC = 3 / 16,777,215
+
 TC ≈ 1.79e-7 (or approximately 0.000018%).
 
 This example shows that the compression rate is extremely low for files of this size, indicating that the method is not efficient for large file compression if only 3 bytes are removed. The effectiveness of this method would be more noticeable in files where the ratio of bytes removed to the total file size is higher.
