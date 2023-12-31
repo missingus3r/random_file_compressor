@@ -13,7 +13,7 @@ Compression
 
 1. Reading the Original File: The content of the original binary file_file.bin is read and converted into a list of integers, representing the bytes of the file.
 2. Calculating the Size and Split Position: The total size of the integer array is calculated and a z-value is determined that indicates the position in which the file will be split. This value is obtained by adding the byte values from the beginning until the sum is less than the total size of the file.
-3. Splitting the File: The integer array is split into two parts at position z. The first part contains the bytes from the beginning to z, and the second part contains the bytes from z to the end.
+3. Splitting the File: The integer array is split into two parts at position z. The first part contains the bytes from the beginning (minus the first bytes) to z, and the second part contains the bytes from z to the end. Then  the first bytes (z) are deleted. This deleted bytes are the size of the first part (compression stage).
 4. Writing Separate Files: Two new binary files are created, original_file.bin.1 and original_file.bin.2, containing the two split parts of the original file.
 
 Decompression
